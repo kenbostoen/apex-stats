@@ -28,7 +28,7 @@ public class StatsService {
     private String URLBASE;
 
     public PlayerStatistics getStats(final String playername) {
-        final String url = "https://public-api.tracker.gg/v2/apex/standard/profile/origin/keniboy20";
+        final String url = URLBASE  + "/profile/origin/" + playername;
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
