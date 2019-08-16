@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/apex.iml" filepath="$PROJECT_DIR$/.idea/apex.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/apexstats.iml" filepath="$PROJECT_DIR$/backend/apexstats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/apexstats.iml" filepath="$PROJECT_DIR$/backend/apexstats.iml" />
     </modules>
   </component>
 </project>
