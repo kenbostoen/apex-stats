@@ -1,7 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Searched</h1>
-    <router-link to="/">Go back</router-link>
+  <div class="wrapper">
+      <v-btn color="error" dark large v-on:click="toHome">Go back</v-btn>
       <div v-if="profileData" class="container">
           <h1 class="gamertag">
               <img :src="profileData.platformInfo.avatarUrl" alt class="platform-avatar" />
@@ -61,14 +60,22 @@ export default {
     },
     mounted() {
         axios
-            .get('http://localhost:8081/api/player/stats/' + this.$route.params.playername)
+            .get('http://localhost:8081/api/player/stats/' + this.$route.params.platform + '/' + this.$route.params.playername)
             .then(response => {
                 this.profileData = response.data;
             })
+    },
+    methods: {
+        toHome() {
+            this.$router.push({ path: '/' });
+        }
     }
 };
 </script>
 <style scoped>
+    .wrapper {
+        padding: 50px;
+    }
     .container {
         background: rgba(0, 0, 0, 0.7);
         color: #fff;

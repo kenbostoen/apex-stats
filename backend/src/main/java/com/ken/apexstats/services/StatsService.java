@@ -1,16 +1,10 @@
 package com.ken.apexstats.services;
 
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -27,8 +21,8 @@ public class StatsService {
     @Value("${api.url.base}")
     private String URLBASE;
 
-    public PlayerStatistics getStats(final String playername) {
-        final String url = URLBASE  + "/profile/origin/" + playername;
+    public PlayerStatistics getStats(final String platform, final String playername) {
+        final String url = URLBASE + "/profile/" + platform + "/" + playername;
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();

@@ -1,6 +1,17 @@
 <template>
   <div id="home">
     <h3>Enter the username you want to search</h3>
+      <v-btn-toggle v-model="platform">
+          <v-btn text value="origin">
+              PC
+          </v-btn>
+          <v-btn text value="psn">
+              Playstation
+          </v-btn>
+          <v-btn text value="xbl">
+              Xbox
+          </v-btn>
+      </v-btn-toggle>
     <v-text-field v-model="username" label="username"></v-text-field>
     <v-btn id="search-button" large color="darkred" v-on:click="search">Search</v-btn>
   </div>
@@ -50,12 +61,13 @@ h3 {
 export default {
   data: function() {
     return {
-      username: ""
+      username: "",
+        platform: 'origin'
     };
   },
   methods: {
     search() {
-      this.$router.push({ path: `/search/${this.username}` });
+        this.$router.push({ path: `/search/${this.platform}/${this.username}` });
     }
   }
 };

@@ -19,9 +19,10 @@ public class StatsController {
         this.statsService = statsService;
     }
 
-    @GetMapping(value = "/player/stats/{playername}")
-    public PlayerStatistics getStatsForPlayer(@PathVariable("playername") String playername) {
-        return statsService.getStats(playername);
+    @GetMapping(value = "/player/stats/{platform}/{playername}")
+    public PlayerStatistics getStatsForPlayer(@PathVariable("playername") String playername,
+                                              @PathVariable("platform") String platform) {
+        return statsService.getStats(platform, playername);
     }
 
 }
