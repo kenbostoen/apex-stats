@@ -1,6 +1,8 @@
 # apex-stats
 apex game player statistic viewer
 
+(images below)
+
 # Technologies used
 Frontend: [VueJS](https://vuejs.org/)
 
@@ -18,5 +20,7 @@ Frontend:
 Backend: 
 ```
   import maven dependencies
-  run main class
+  mvn spring-boot:run
 ```
+![Homepage](https://github.com/kenbostoen/apex-stats/blob/master/screenshot1.png)
+![Statspage](https://github.com/kenbostoen/apex-stats/blob/master/screenshot2.png)
