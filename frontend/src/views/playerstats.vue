@@ -17,7 +17,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://localhost:8081/player/stats/keniboy20')
+            .get('http://localhost:8081/api/player/stats/keniboy20')
             .then(response => {
                 this.stats = response;
                 console.log(response);
