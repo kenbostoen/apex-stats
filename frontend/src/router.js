@@ -13,7 +13,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/stats',
+      path: '/search/:playername',
       name: 'playerstats',
       component: Playerstats
     }

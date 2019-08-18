@@ -6,6 +6,22 @@
 </template>
 <script>
 export default {
-  name: "playerstats"
+  name: "playerstats",
+    data: function() {
+      return {
+        stats: null
+      }
+    },
+    created() {
+        console.log('test');
+    },
+    mounted() {
+        axios
+            .get('http://localhost:8081/player/stats/keniboy20')
+            .then(response => {
+                this.stats = response;
+                console.log(response);
+            })
+    }
 };
 </script>
