@@ -8,14 +8,15 @@ Backend: [Java springboot](https://spring.io/projects/spring-boot)
 
 
 # How to run
-Backend: 
-```
-  import maven dependencies
-  run main class
-```
 
 Frontend:
 ```
   npm install
   npm run serve
   ```
+
+Backend: 
+```
+  import maven dependencies
+  run main class
+```
